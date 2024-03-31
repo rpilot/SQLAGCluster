@@ -152,7 +152,8 @@
                     "ClusterOperatorAccount": "[parameters('existingDomainAccount')]",
                     "SqlServiceAccount": "[parameters('existingSqlServiceAccount')]",
                     "StorageAccountUrl": "[reference(resourceId('Microsoft.Storage/storageAccounts', parameters('cloudWitnessName')), '2022-09-01').primaryEndpoints['blob']]",
-                    "StorageAccountPrimaryKey": "[listKeys(resourceId('Microsoft.Storage/storageAccounts', parameters('cloudWitnessName')), '2022-09-01').keys[0].value]"
+                    "StorageAccountPrimaryKey": "[listKeys(resourceId('Microsoft.Storage/storageAccounts', parameters('cloudWitnessName')), '2022-09-01').keys[0].value]",
+                    "clusterSubnetType": "SingleSubnet"
                 }
             }
         },
