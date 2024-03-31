@@ -106,7 +106,7 @@
     "variables": {
         "existingVMListArray": "[split(parameters('existingVmList'),',')]",
         "GroupResourceId": "[resourceId('Microsoft.SqlVirtualMachine/SqlVirtualMachineGroups', parameters('failoverClusterName'))]",
-        "joinClusterTemplateURL": "[uri(parameters('_artifactsLocation'),format('/nested/join-cluster.json',parameters('_artifactsLocationSasToken')))]"
+        "joinClusterTemplateURL": "[uri(parameters('_artifactsLocation'),format('nested/join-cluster.json',parameters('_artifactsLocationSasToken')))]"
     },
     "resources": [
         {
